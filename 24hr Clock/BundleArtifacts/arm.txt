@@ -1,0 +1,2 @@
+MainPackage=C:\Users\Mandie\documents\visual studio 2017\Projects\24hr Clock\24hr Clock\bin\ARM\Debug\24hr Clock_1.0.0.0_ARM_Debug.appx
+SymbolPackage=C:\Users\Mandie\documents\visual studio 2017\Projects\24hr Clock\24hr Clock\AppPackages\24hr Clock_1.0.0.0_Debug_Test\24hr Clock_1.0.0.0_ARM_Debug.appxsym

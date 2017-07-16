@@ -1,0 +1,110 @@
+﻿<Page
+    x:Class="_24hr_Clock.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_24hr_Clock"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:ConnectionId='1' x:Name="clockGrid" Background="White">
+        <TextBlock x:ConnectionId='2' x:Name="clockTime" Margin="0,50,0,0" TextWrapping="Wrap" Text="00:00:00" Height="61" FontSize="36" TextAlignment="Center" VerticalAlignment="Top" />
+
+        <CommandBar x:ConnectionId='3' x:Name="timeZoneCommandBar" Height="50" ClosedDisplayMode="Minimal" RequestedTheme="Dark" >
+            <CommandBar.Content>
+            <StackPanel x:ConnectionId='10' x:Name="timeZoneStackPanel" Orientation="Horizontal" VerticalAlignment="Stretch" Padding="0,10,0,0">
+                <TextBlock x:ConnectionId='11' x:Name="timeZoneTextBlock" Text="Time Zone" VerticalAlignment="Center" FontSize="10" Padding="3,0,4,0" TextAlignment="Center"></TextBlock>
+                    <ComboBox x:ConnectionId='12' VerticalAlignment="Center" MinHeight="20" MinWidth="150" x:Name="timeZoneComboBox" FontSize="9" SelectedIndex="27" >
+                        <ComboBoxItem>Afghanistan Standard Time(GMT + 04:30)</ComboBoxItem>
+                        <ComboBoxItem>Alaskan Standard Time (GMT-09:00)</ComboBoxItem>
+                        <ComboBoxItem>Arab Standard Time (GMT+03:00)</ComboBoxItem>
+                        <ComboBoxItem>Arabian Standard Time (GMT+04:00)</ComboBoxItem>
+                        <ComboBoxItem>Arabic Standard Time (GMT+03:00)</ComboBoxItem>
+                        <ComboBoxItem>Atlantic Standard Time (GMT-04:00)</ComboBoxItem>
+                        <ComboBoxItem>AUS Central Standard Time (GMT+09:30)</ComboBoxItem>
+                        <ComboBoxItem>AUS Eastern Standard Time (GMT+10:00)</ComboBoxItem>
+                        <ComboBoxItem>Azerbaijan Standard Time (GMT +04:00)</ComboBoxItem>
+                        <ComboBoxItem>Azores Standard Time (GMT-01:00)</ComboBoxItem>
+                        <ComboBoxItem>Canada Central Standard Time (GMT-06:00)</ComboBoxItem>
+                        <ComboBoxItem>Cape Verde Standard Time (GMT-01:00)</ComboBoxItem>
+                        <ComboBoxItem>Caucasus Standard Time (GMT+04:00)</ComboBoxItem>
+                        <ComboBoxItem>Cen. Australia Standard Time (GMT+09:30)</ComboBoxItem>
+                        <ComboBoxItem>Central America Standard Time (GMT-06:00)</ComboBoxItem>
+                        <ComboBoxItem>Central Asia Standard Time (GMT+06:00)</ComboBoxItem>
+                        <ComboBoxItem>Central Brazilian Standard Time (GMT -04:00)</ComboBoxItem>
+                        <ComboBoxItem>Central Europe Standard Time (GMT+01:00)</ComboBoxItem>
+                        <ComboBoxItem>Central European Standard Time (GMT+01:00)</ComboBoxItem>
+                        <ComboBoxItem>Central Pacific Standard Time (GMT+11:00)</ComboBoxItem>
+                        <ComboBoxItem>Central Standard Time (GMT-06:00)</ComboBoxItem>
+                        <ComboBoxItem>China Standard Time (GMT+08:00)</ComboBoxItem>
+                        <ComboBoxItem>Dateline Standard Time (GMT-12:00)</ComboBoxItem>
+                        <ComboBoxItem>E. Africa Standard Time (GMT+03:00)</ComboBoxItem>
+                        <ComboBoxItem>E. Australia Standard Time (GMT+10:00)</ComboBoxItem>
+                        <ComboBoxItem>E. Europe Standard Time (GMT+02:00)</ComboBoxItem>
+                        <ComboBoxItem>E. South America Standard Time (GMT-03:00)</ComboBoxItem>
+                        <ComboBoxItem>Eastern Standard Time (GMT-05:00)</ComboBoxItem>
+                        <ComboBoxItem>Egypt Standard Time (GMT+02:00)</ComboBoxItem>
+                        <ComboBoxItem>Ekaterinburg Standard Time (GMT+05:00)</ComboBoxItem>
+                        <ComboBoxItem>Fiji Standard Time (GMT+12:00)</ComboBoxItem>
+                        <ComboBoxItem>FLE Standard Time (GMT+02:00)</ComboBoxItem>
+                        <ComboBoxItem>Georgian Standard Time (GMT +04:00)</ComboBoxItem>
+                        <ComboBoxItem>Greenland Standard Time (GMT-03:00)</ComboBoxItem>
+                        <ComboBoxItem>Greenwich Standard Time (GMT)</ComboBoxItem>
+                        <ComboBoxItem>Hawaiian Standard Time (GMT-10:00)</ComboBoxItem>
+                        <ComboBoxItem>India Standard Time (GMT+05:30)</ComboBoxItem>
+                        <ComboBoxItem>Iran Standard Time (GMT+03:30)</ComboBoxItem>
+                        <ComboBoxItem>Israel Standard Time (GMT+02:00)</ComboBoxItem>
+                        <ComboBoxItem>Korea Standard Time (GMT+09:00)</ComboBoxItem>
+                        <ComboBoxItem>Mid-Atlantic Standard Time (GMT-02:00)</ComboBoxItem>
+                        <ComboBoxItem>Mountain Standard Time (GMT-07:00)</ComboBoxItem>
+                        <ComboBoxItem>Myanmar Standard Time (GMT+06:30)</ComboBoxItem>
+                        <ComboBoxItem>N. Central Asia Standard Time (GMT+06:00)</ComboBoxItem>
+                        <ComboBoxItem>Namibia Standard Time (GMT +02:00)</ComboBoxItem>
+                        <ComboBoxItem>Nepal Standard Time (GMT+05:45)</ComboBoxItem>
+                        <ComboBoxItem>New Zealand Standard Time (GMT+12:00)</ComboBoxItem>
+                        <ComboBoxItem>Newfoundland Standard Time (GMT-03:30)</ComboBoxItem>
+                        <ComboBoxItem>North Asia East Standard Time (GMT+08:00)</ComboBoxItem>
+                        <ComboBoxItem>North Asia Standard Time (GMT+07:00)</ComboBoxItem>
+                        <ComboBoxItem>Pacific SA Standard Time (GMT-04:00)</ComboBoxItem>
+                        <ComboBoxItem>Pacific Standard Time (GMT-08:00)</ComboBoxItem>
+                        <ComboBoxItem>Romance Standard Time (GMT+01:00)</ComboBoxItem>
+                        <ComboBoxItem>Russian Standard Time (GMT+03:00)</ComboBoxItem>
+                        <ComboBoxItem>SA Eastern Standard Time (GMT-03:00)</ComboBoxItem>
+                        <ComboBoxItem>SA Pacific Standard Time (GMT-05:00)</ComboBoxItem>
+                        <ComboBoxItem>SA Western Standard Time (GMT-04:00)</ComboBoxItem>
+                        <ComboBoxItem>Samoa Standard Time (GMT-11:00)</ComboBoxItem>
+                        <ComboBoxItem>SE Asia Standard Time (GMT+07:00)</ComboBoxItem>
+                        <ComboBoxItem>Singapore Standard Time (GMT+08:00)</ComboBoxItem>
+                        <ComboBoxItem>South Africa Standard Time (GMT+02:00)</ComboBoxItem>
+                        <ComboBoxItem>Sri Lanka Standard Time (GMT+06:00)</ComboBoxItem>
+                        <ComboBoxItem>Taipei Standard Time (GMT+08:00)</ComboBoxItem>
+                        <ComboBoxItem>Tasmania Standard Time (GMT+10:00)</ComboBoxItem>
+                        <ComboBoxItem>Tokyo Standard Time (GMT+09:00)</ComboBoxItem>
+                        <ComboBoxItem>Tonga Standard Time (GMT+13:00)</ComboBoxItem>
+                        <ComboBoxItem>US Eastern Standard Time (GMT-05:00)</ComboBoxItem>
+                        <ComboBoxItem>US Mountain Standard Time (GMT-07:00)</ComboBoxItem>
+                        <ComboBoxItem>Vladivostok Standard Time (GMT+10:00)</ComboBoxItem>
+                        <ComboBoxItem>W. Australia Standard Time (GMT+08:00)</ComboBoxItem>
+                        <ComboBoxItem>W. Central Africa Standard Time (GMT+01:00)</ComboBoxItem>
+                        <ComboBoxItem>W. Europe Standard Time (GMT+01:00)</ComboBoxItem>
+                        <ComboBoxItem>West Asia Standard Time (GMT+05:00)</ComboBoxItem>
+                        <ComboBoxItem>West Pacific Standard Time (GMT+10:00)</ComboBoxItem>
+                        <ComboBoxItem>Yakutsk Standard Time (GMT+09:00)</ComboBoxItem>
+                    </ComboBox>
+            </StackPanel>
+        </CommandBar.Content>
+        </CommandBar>
+
+        <CommandBar x:ConnectionId='4' x:Name="uiCommandBar" Height="51" ClosedDisplayMode="Minimal" RequestedTheme="Light" Margin="0,130,0,0" Background="{x:Null}" >
+            <CommandBar.Content>
+                <StackPanel x:ConnectionId='5' x:Name="uiStackPanel" Orientation="Horizontal" VerticalAlignment="Stretch" Padding="0,10,0,0">
+                    <RadioButton x:ConnectionId='6' x:Name="lightRB" Tag="Light" GroupName="colorgrp" Padding="6,0,0,0" MinWidth="55" FontSize="9" VerticalContentAlignment="Center" Margin="8,0,0,0"                                   >Light</RadioButton>
+                    <RadioButton x:ConnectionId='7' x:Name="darkRB" Tag="Dark" GroupName="colorgrp" Padding="3,0,0,0" MinWidth="125" FontSize="9" VerticalContentAlignment="Center"                                   >Dark</RadioButton>
+                    <RadioButton x:ConnectionId='8' x:Name="militaryRB" Tag="24hr" GroupName="numgrp" Padding="3,0,0,0" MinWidth="50" FontSize="9" VerticalContentAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Left"                                  >24hr</RadioButton>
+                    <RadioButton x:ConnectionId='9' x:Name="tweleveRB" Tag="12hr" GroupName="numgrp" Padding="3,0,0,0" MinWidth="50" FontSize="9" VerticalContentAlignment="Center" HorizontalAlignment="Right" HorizontalContentAlignment="Left"                                  >12hr</RadioButton>
+                </StackPanel>
+            </CommandBar.Content>
+        </CommandBar>
+    </Grid>
+</Page>
+
